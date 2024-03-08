@@ -1,45 +1,53 @@
 export default function Footer() {
   return (
-    <div className="text-black w-full pt-6 pb-8 px-8 bg-white  flex flex-col justify-center items-center Frounded">
+    <div className="text-black w-full pt-6 pb-8 px-2 min-[440px]:px-8 bg-white  flex flex-col justify-center items-center Frounded">
       <div className="flex flex-col justify-center w-full items-center">
-        <div className="grid grid-cols-3 lg:grid-cols-9 gap-y-4 grid-rows-1 px-8 mx-auto max-w-7xl py-10 border-b-2 border-gray-300/50">
+        <div className="grid grid-cols-3 lg:grid-cols-9 gap-y-4 grid-rows-1 px-1 min-[440px]:px-8 mx-auto max-w-7xl py-10 border-b-2 border-gray-300/50">
           <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
-              <h3 className="font-semibold roboto">Product</h3>
+              <h3 className="min-[440px]:text-base text-sm font-semibold roboto">
+                Product
+              </h3>
             </li>
-            <li className="text-sm">Employee Database</li>
-            <li className="text-sm">Payroll</li>
-            <li className="text-sm">Absenses</li>
-            <li className="text-sm">Time tracking</li>
-            <li className="text-sm">Shift planner</li>
-            <li className="text-sm">Recruiting</li>
+            <li className="text-xs min-[440px]:text-sm">Employee Database</li>
+            <li className="text-xs min-[440px]:text-sm">Payroll</li>
+            <li className="text-xs min-[440px]:text-sm">Absenses</li>
+            <li className="text-xs min-[440px]:text-sm">Time tracking</li>
+            <li className="text-xs min-[440px]:text-sm">Shift planner</li>
+            <li className="text-xs min-[440px]:text-sm">Recruiting</li>
           </ul>
 
           <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
-              <h3 className="font-semibold roboto">Information</h3>
+              <h3 className="min-[440px]:text-base text-sm font-semibold roboto">
+                Information
+              </h3>
             </li>
-            <li className="text-sm">FAQ</li>
-            <li className="text-sm">Blog</li>
-            <li className="text-sm">Support</li>
+            <li className="text-xs min-[440px]:text-sm">FAQ</li>
+            <li className="text-xs min-[440px]:text-sm">Blog</li>
+            <li className="text-xs min-[440px]:text-sm">Support</li>
           </ul>
 
           <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
-              <h3 className="font-semibold roboto">Company</h3>
+              <h3 className="min-[440px]:text-base text-sm font-semibold roboto">
+                Company
+              </h3>
             </li>
-            <li className="text-sm">About us</li>
-            <li className="text-sm">Careers</li>
-            <li className="text-sm">Contact us</li>
-            <li className="text-sm">Lift Media</li>
+            <li className="text-xs min-[440px]:text-sm">About us</li>
+            <li className="text-xs min-[440px]:text-sm">Careers</li>
+            <li className="text-xs min-[440px]:text-sm">Contact us</li>
+            <li className="text-xs min-[440px]:text-sm">Lift Media</li>
           </ul>
 
           <div className="flex flex-col gap-y-2 bg-slate-200 px-10 py-8 rounded-lg col-span-3 row-start-1 col-start-1 lg:col-start-7 lg:col-span-3">
-            <h3 className="font-semibold roboto pb-4">Subscribe</h3>
+            <h3 className="text-sm min-[440px]:text-base font-semibold roboto pb-4">
+              Subscribe
+            </h3>
             <div className="flex border-2 rounded-lg">
               <input
                 type="email"
-                className="px-4 py-3 w-full"
+                className="px-4 py-3 w-full text-sm min-[440px]:text-base"
                 placeholder="Email address"
               />
               <button className="rounded-r-lg bg-blue-500 text-white px-3 ">
@@ -60,7 +68,7 @@ export default function Footer() {
                 </svg>
               </button>
             </div>
-            <p className="text-sm text-gray-500 pt-4">
+            <p className="text-xs min-[440px]:text-sm text-gray-500 pt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam alias dolor commodi, quasi aspernatur pariatur ea
               explicabo totam nemo eveniet.
@@ -68,11 +76,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between w-full items-center pt-8 px-24 pb-4">
+      <div className="flex justify-between w-full items-center pt-8 px-0 min-[440px]:px-24 pb-4">
         <div>
           <a href="#">Surichakra</a>
         </div>
-        <div className="flex justify-center text-sm roboto font-semibold">
+        <div className="hidden min-[440px]:flex justify-center text-sm roboto font-semibold">
           <a href="#" className="px-3">
             Therms
           </a>

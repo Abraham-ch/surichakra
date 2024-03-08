@@ -23,7 +23,7 @@ export default function AboutUs() {
                 <a
                   target="_blank"
                   href="#"
-                  className="border-2 rounded-lg px-6 py-3 w-fit font-semibold border-black hover:scale-105 transition-all my-2"
+                  className="border-2 self-center min-[440px]:self-start rounded-lg px-6 py-3 w-fit font-semibold border-black hover:scale-105 transition-all my-2"
                 >
                   Try it for free
                 </a>
@@ -944,7 +944,7 @@ export default function AboutUs() {
                 <a
                   target="_blank"
                   href="#"
-                  className="border-2 rounded-lg px-6 py-3 w-fit font-semibold border-black hover:scale-105 transition-all my-2"
+                  className="border-2 self-center min-[440px]:self-start rounded-lg px-6 py-3 w-fit font-semibold border-black hover:scale-105 transition-all my-2"
                 >
                   Try it for free
                 </a>

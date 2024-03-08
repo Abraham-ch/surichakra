@@ -35,13 +35,13 @@ const VideoComponent = () => {
       <div className="h-full w-full mt-20 mb-32">
         <div className="w-11/12 mx-auto h-full bg-white rounded-lg flex flex-col items-center justify-between">
           <span>
-            <h2 className=" text-center leading-tight font-semibold text-2xl sm:text-4xl pt-8 sm:pt-16 ">
+            <h2 className=" text-center leading-tight font-semibold text-xl min-[440px]:text-2xl sm:text-4xl pt-8 sm:pt-16 ">
               Estima tus registros
             </h2>
-            <div className="text-center pt-4 sm:pt-8 font-semibold text-6xl sm:text-7xl">
+            <div className="text-center pt-4 sm:pt-8 font-semibold text-4xl min-[440px]:text-6xl sm:text-7xl">
               EN TIEMPO REAL
             </div>
-            <p className="text-center pt-4 sm:pt-8 max-w-xl xl:max-w-2xl text-sm px-4 sm:px-0 sm:text-base xl:text-lg">
+            <p className="text-center pt-4 sm:pt-8 max-w-xl xl:max-w-2xl text-xs min-[440px]:text-sm px-4 sm:px-0 sm:text-base xl:text-lg">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Perferendis molestias voluptatibus ea adipisci alias soluta ex
               laudantium.
@@ -84,7 +84,7 @@ const ContactPopup = ({ isOpen, togglePopup }) => {
                 placeholder="Escribe tu email"
                 className="text-black focus:border-transparent focus:ring-0 border-2 px-4 py-2 w-2/3"
               />
-              <label for="Name" className="font-semibold text-black">
+              <label htmlFor="Name" className="font-semibold text-black">
                 Nombre y Apellido
               </label>
               <input
@@ -94,7 +94,7 @@ const ContactPopup = ({ isOpen, togglePopup }) => {
                 className="border-2 border-gray-200 text-black px-4 py-2 overflow-scroll overflow-y-auto w-2/3"
                 placeholder="Dinos tu nombre"
               />
-              <label for="Propuesta" className="font-semibold text-black">
+              <label htmlFor="Propuesta" className="font-semibold text-black">
                 Asunto
               </label>
               <textarea
@@ -159,10 +159,10 @@ export default function Home() {
     <div className="scroll bg-[#161815] bg-[radial-gradient(#ffffff33_1px,#161815_1px)] bg-[size:50px_50px]">
       <Header />
       <Section>
-        <div className="pt-24 sm:pt-0 h-screen w-full flex flex-col justify-center items-center">
+        <div className="pt-16 h-full w-full flex flex-col justify-center items-center">
           <div className="max-w-7xl flex flex-col justify-center items-center w-full roboto gap-y-6">
             <motion.h1
-              className="text-5xl sm:text-6xl transition-all lg:text-7xl font-semibold bg-gradient-to-r bg-clip-text text-transparent from-purple-400 to-emerald-400 brightness-150 text-center "
+              className=" text-3xl min-[440px]:text-5xl sm:text-6xl transition-all lg:text-7xl font-semibold bg-gradient-to-r bg-clip-text text-transparent from-purple-400 to-emerald-400 brightness-150 text-center "
               initial={{ opacity: 0, scale: 1, y: 0 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{
@@ -177,7 +177,7 @@ export default function Home() {
               </div>
             </motion.h1>
             <motion.p
-              className="text-center md:text-base text-[#909090] max-w-2xl lg:text-lg font-sans px-4"
+              className="text-center text-sm md:text-base text-[#909090] max-w-2xl lg:text-lg font-sans px-4"
               initial={{ opacity: 0, scale: 0.5, y: -50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{
@@ -205,17 +205,17 @@ export default function Home() {
                 target="_blank"
                 method="POST"
               >
-                <div className="flex border-[1px] px-2 py-2 rounded-lg">
+                <div className="flex border-[1px] px-2 mx-2 py-2 rounded-lg">
                   <input
                     type="email"
                     placeholder="Your email"
                     name="email"
                     id="email"
                     required
-                    className="bg-[#161815] focus:outline-none rounded-lg py-2 px-8 text-white max-w-2xl"
+                    className="bg-[#161815] focus:outline-none rounded-lg py-2 px-4 sm:px-8 text-white w-32 min-[440px]:w-48 sm:max-w-2xl"
                   />
                   <button
-                    className="bg-blue-950 text-white font-bold hover:scale-105 transition-all brightness-150 rounded-lg px-8 py-2"
+                    className="bg-blue-950 text-white font-normal min-[440px]:font-bold hover:scale-105 transition-all brightness-150 rounded-lg px-4 sm:px-8 py-2"
                     type="submit"
                   >
                     Start for free
@@ -349,11 +349,11 @@ export default function Home() {
       <Section>
         <div className="h-full w-full flex flex-col mt-24 text-white">
           <div className="max-w-7xl w-full mx-auto">
-            <h1 className="font-semibold text-5xl text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-cyan-400 tracking-wide leading-snug py-8 px-8 max-w-5xl ">
+            <h1 className="font-semibold text-3xl min-[440px]:text-5xl text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-cyan-400 tracking-wide leading-snug py-8 px-8 max-w-5xl ">
               Colaborando con industrias IoT
             </h1>
-            <div className="divide-x flex items-center">
-              <p className="text-base transition-all md:text-lg font-light max-w-2xl px-8 items-center text-pretty">
+            <div className="divide-x flex items-center min-[440px]:px-0 px-4">
+              <p className=" hidden min-[440px]:block text-base transition-all md:text-lg font-light max-w-2xl px-8 items-center text-pretty">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti nisi laborum nihil voluptate eligendi delectus quis
                 nobis similique quod maiores expedita esse dolor.
@@ -367,9 +367,9 @@ export default function Home() {
                 <p className="text-base md:text-lg ">Hasta esta cantidad</p>
               </div>
             </div>
-            <div className="grid gri-cols-2 sm:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 gap-x-8 gap-y-8 px-8 py-16 transition-all w-full justify-center items-center">
-              <div className="rounded-lg px-4 py-4 col-span-2 sm:col-span-3 row-span-1 lg:col-span-1 lg:border-2 lg:h-32">
-                <p className="text-xl font-semibold">
+            <div className="grid grid-cols-1 min-[440px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 gap-x-8 gap-y-8 px-8 py-16 transition-all w-full justify-center items-center">
+              <div className="rounded-lg px-4 py-4 col-span-1 min-[440px]:col-span-2 sm:col-span-3 row-span-1 lg:col-span-1 lg:border-2 lg:h-32 ">
+                <p className="text-base text-center min-[440px]:text-left min-[440px]:text-xl font-semibold">
                   Colaborate with popular brand
                 </p>
               </div>
@@ -770,7 +770,7 @@ export default function Home() {
                 </svg>
               </div>
               <button
-                className="group/item rounded-lg justify-center gap-x-4 lg:gap-x-0 w-full px-4 py-4 shadow-lg hover:brightness-115 hover:bg-black/50 lg:border-2 hover:border-transparent flex lg:justify-between hover:brightness-125 transition-all text-white items-center col-span-2 sm:col-span-3 lg:col-span-1 lg:h-32"
+                className="group/item rounded-lg justify-center gap-x-4 lg:gap-x-0 w-full px-4 py-4 shadow-lg hover:brightness-115 hover:bg-black/50 lg:border-2 hover:border-transparent flex lg:justify-between hover:brightness-125 transition-all text-white items-center col-span-1 min-[440px]:col-span-2 sm:col-span-3 lg:col-span-1 lg:h-32"
                 onClick={togglePopup}
               >
                 <p className="text-xl w-fit font-semibold">
