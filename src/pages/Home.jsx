@@ -4,26 +4,8 @@ import surichakradash from "../assets/img0.png";
 import Footer from "../components/Footer";
 import React, { useState, useRef, useEffect } from "react";
 import video from "../assets/video.mp4";
-import { motion, useInView } from "framer-motion";
-
-function Section({ children }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <section ref={ref}>
-      <span
-        style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-        }}
-      >
-        {children}
-      </span>
-    </section>
-  );
-}
+import { motion } from "framer-motion";
+import Section from "../components/motionSection";
 
 const VideoComponent = () => {
   const videoRef = useRef(null);
@@ -49,26 +31,25 @@ const VideoComponent = () => {
 
   return (
     <Section>
-      <div
-        className="h-full w-full mt-20 mb-32"
-        onMouseEnter={handleMouseEnter}
-      >
+      {/* Poner dentro del primer div para que el video se reproduzca al hacer hover a Section en lugar de reproducir al aparecer onMouseEnter={handleMouseEnter} */}
+      <div className="h-full w-full mt-20 mb-32">
         <div className="w-11/12 mx-auto h-full bg-white rounded-lg flex flex-col items-center justify-between">
           <span>
-            <h2 className=" text-center leading-tight font-semibold text-4xl pt-16 ">
+            <h2 className=" text-center leading-tight font-semibold text-2xl sm:text-4xl pt-8 sm:pt-16 ">
               Estima tus registros
             </h2>
-            <div className="text-center pt-8 font-semibold text-7xl">
+            <div className="text-center pt-4 sm:pt-8 font-semibold text-6xl sm:text-7xl">
               EN TIEMPO REAL
             </div>
-            <p className="text-center pt-8 text-lg">
+            <p className="text-center pt-4 sm:pt-8 max-w-xl xl:max-w-2xl text-sm px-4 sm:px-0 sm:text-base xl:text-lg">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Perferendis molestias voluptatibus ea adipisci alias soluta ex
               laudantium.
             </p>
           </span>
-          <div className="w-5/6 rounded-lg self-center">
-            <video ref={videoRef} muted>
+          <div className="w-full sm:w-5/6 rounded-lg self-center">
+            <video muted autoPlay>
+              {/* poner ref para el video que se quiera reproducir al hacer hover ref={videoRef} */}
               <source src={video} type="video/mp4" />
               Tu navegador no soporta la etiqueta de video.
             </video>
@@ -93,7 +74,7 @@ const ContactPopup = ({ isOpen, togglePopup }) => {
               method="POST"
               className="flex flex-col gap-y-4"
             >
-              <label for="Email" className="font-semibold text-black">
+              <label htmlFor="Email" className="font-semibold text-black">
                 Email
               </label>
               <input
@@ -120,7 +101,7 @@ const ContactPopup = ({ isOpen, togglePopup }) => {
                 name="Propuesta"
                 id="Propuesta"
                 placeholder="Propuesta"
-                class="form-textarea mt-1 block w-full rounded-md h-32 border-gray-300 shadow-sm px-4 py-2 border-2 text-black "
+                className="form-textarea mt-1 block w-full rounded-md h-32 border-gray-300 shadow-sm px-4 py-2 border-2 text-black "
                 rows="3"
               ></textarea>
 
@@ -178,10 +159,10 @@ export default function Home() {
     <div className="scroll bg-[#161815] bg-[radial-gradient(#ffffff33_1px,#161815_1px)] bg-[size:50px_50px]">
       <Header />
       <Section>
-        <div className="h-screen w-full flex flex-col justify-center items-center">
+        <div className="pt-24 sm:pt-0 h-screen w-full flex flex-col justify-center items-center">
           <div className="max-w-7xl flex flex-col justify-center items-center w-full roboto gap-y-6">
             <motion.h1
-              className="text-7xl font-semibold bg-gradient-to-r bg-clip-text text-transparent from-purple-400 to-emerald-400 brightness-150 text-center"
+              className="text-5xl sm:text-6xl transition-all lg:text-7xl font-semibold bg-gradient-to-r bg-clip-text text-transparent from-purple-400 to-emerald-400 brightness-150 text-center "
               initial={{ opacity: 0, scale: 0.5, y: -50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{
@@ -195,28 +176,55 @@ export default function Home() {
                 of Surichakra
               </div>
             </motion.h1>
-            <p className="text-center text-[#909090] max-w-2xl text-lg font-sans">
+            <motion.p
+              className="text-center md:text-base text-[#909090] max-w-2xl lg:text-lg font-sans px-4"
+              initial={{ opacity: 0, scale: 0.5, y: -50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.6,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptates earum reiciendis labore facilis nisi vel sint incidunt
               corporis, eos, repellendus placeat impedit illum similique, nihil
               ipsa nam harum repellat amet!
-            </p>
-            <form>
-              <div className="flex border-[1px] px-2 py-2 rounded-lg">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  name="email"
-                  id="email"
-                  required
-                  className="bg-[#161815] focus:outline-none rounded-lg py-2 px-8 text-white max-w-2xl"
-                />
-                <button className="bg-blue-950 text-white font-bold hover:scale-105 transition-all brightness-150 rounded-lg px-8 py-2">
-                  Start for free
-                </button>
-              </div>
-            </form>
-            <div className="grid grid-cols-3 w-full px-12 gap-x-12 py-4">
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, y: 50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.7,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
+              <form
+                action="https://formsubmit.co/ascaytaos@gmail.com"
+                target="_blank"
+                method="POST"
+              >
+                <div className="flex border-[1px] px-2 py-2 rounded-lg">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    name="email"
+                    id="email"
+                    required
+                    className="bg-[#161815] focus:outline-none rounded-lg py-2 px-8 text-white max-w-2xl"
+                  />
+                  <button
+                    className="bg-blue-950 text-white font-bold hover:scale-105 transition-all brightness-150 rounded-lg px-8 py-2"
+                    type="submit"
+                  >
+                    Start for free
+                  </button>
+                </div>
+              </form>
+            </motion.div>
+
+            <div className="grid gap-y-4 sm:grid-cols-3 w-full px-12 md:gap-x-6 transition-all gap-x-2 lg:gap-x-12 py-4">
               <motion.div
                 className="bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center"
                 initial={{ opacity: 0, scale: 0.5, x: -200 }}
@@ -227,12 +235,10 @@ export default function Home() {
                   ease: [0, 0.71, 0.2, 1.01],
                 }}
               >
-                <span className="px-2 flex items-center gap-x-2">
+                <span className="lg:px-2 flex items-center gap-x-2">
                   <span>
                     <svg
-                      className="text-sky-500"
-                      width="24"
-                      height="24"
+                      className="text-sky-500 w-5 lg:w-6 h-full"
                       viewBox="0 0 24 24"
                       strokeWidth="2"
                       stroke="currentColor"
@@ -245,9 +251,11 @@ export default function Home() {
                       <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                     </svg>
                   </span>
-                  <h3 className="py-1 font-medium">Amplia Compatibilidad</h3>
+                  <h3 className="py-1 transition-all lg:text-base text-sm font-medium">
+                    Amplia Compatibilidad
+                  </h3>
                 </span>
-                <p className="pt-2 px-2 text-pretty text-sm roboto text-[#909090] ">
+                <p className="pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
                   Soporte para una extensa variedad de dispositivos mediante la
                   integración con plataformas líderes en el mercado de IoT, como
                   Tuya y asistentes de voz como Alexa.
@@ -264,12 +272,10 @@ export default function Home() {
                   ease: [0, 0.71, 0.2, 1.01],
                 }}
               >
-                <span className="px-2 flex items-center gap-x-2">
+                <span className="lg:px-2 flex items-center gap-x-2">
                   <span>
                     <svg
-                      className="text-sky-500"
-                      width="24"
-                      height="24"
+                      className="text-sky-500 w-5 lg:w-6 h-full"
                       viewBox="0 0 24 24"
                       strokeWidth="2"
                       stroke="currentColor"
@@ -286,9 +292,11 @@ export default function Home() {
                       <path d="M8 16a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2" />
                     </svg>
                   </span>
-                  <h3 className="py-1 font-medium">Interfaz Intuitiva</h3>
+                  <h3 className="py-1 transition-all lg:text-base text-sm font-medium">
+                    Interfaz Intuitiva
+                  </h3>
                 </span>
-                <p className="pt-2 px-2 text-pretty text-sm roboto text-[#909090]">
+                <p className="pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
                   Interfaz amigable que permita a los usuarios configurar
                   fácilmente sus dispositivos, visualizar datos en tiempo real y
                   automatizar tareas.
@@ -305,12 +313,10 @@ export default function Home() {
                   ease: [0, 0.71, 0.2, 1.01],
                 }}
               >
-                <span className="px-2 flex items-center gap-x-2">
+                <span className="lg:px-2 flex items-center gap-x-2">
                   <span>
                     <svg
-                      className="text-sky-500"
-                      width="24"
-                      height="24"
+                      className="text-sky-500 w-5 lg:w-6 h-full"
                       viewBox="0 0 24 24"
                       strokeWidth="2"
                       stroke="currentColor"
@@ -323,11 +329,11 @@ export default function Home() {
                       <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                     </svg>
                   </span>
-                  <h3 className="py-1 font-medium">
+                  <h3 className="py-1 transition-all lg:text-base text-sm font-medium">
                     Automatización de Hogar y Negocios
                   </h3>
                 </span>
-                <p className="pt-2 px-2 text-pretty text-sm roboto text-[#909090]">
+                <p className="pt-2 px-0 lg:px-3 text-pretty lg:pt-3 text-sm roboto text-[#909090] max-h-36 truncate">
                   Capacidad para crear automatizaciones complejas que abarquen
                   tanto el ámbito del hogar inteligente como necesidades
                   industriales y comerciales.
@@ -341,28 +347,28 @@ export default function Home() {
       <VideoComponent />
 
       <Section>
-        <div className="h-screen w-full flex flex-col mt-24 text-white">
+        <div className="h-full w-full flex flex-col mt-24 text-white">
           <div className="max-w-7xl w-full mx-auto">
             <h1 className="font-semibold text-5xl text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-cyan-400 tracking-wide leading-snug py-8 px-8 max-w-5xl ">
               Colaborando con industrias IoT
             </h1>
-            <div className="divide-x flex">
-              <p className="text-lg font-light max-w-2xl px-8 items-center text-pretty">
+            <div className="divide-x flex items-center">
+              <p className="text-base transition-all md:text-lg font-light max-w-2xl px-8 items-center text-pretty">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti nisi laborum nihil voluptate eligendi delectus quis
                 nobis similique quod maiores expedita esse dolor.
               </p>
-              <div className="px-8">
-                <h3 className="text-4xl font-semibold">80+</h3>
-                <p className="text-lg max-w-40">Hasta esta cantidad de algo</p>
+              <div className="px-8 items-center">
+                <h3 className="text-3xl md:text-4xl font-semibold">80+</h3>
+                <p className="text-base md:text-lg ">Hasta esta cantidad</p>
               </div>
-              <div className="px-8">
-                <h3 className="text-4xl font-semibold">64</h3>
-                <p className="text-lg max-w-40">Hasta esta cantidad de algo</p>
+              <div className="px-8 items-center">
+                <h3 className="text-3xl md:text-4xl font-semibold">64</h3>
+                <p className="text-base md:text-lg ">Hasta esta cantidad</p>
               </div>
             </div>
-            <div className="grid grid-cols-4 grid-rows-2 gap-x-8 gap-y-8 px-8 py-16">
-              <div className=" rounded-lg h-32 px-4 py-4">
+            <div className="grid gri-cols-2 sm:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 gap-x-8 gap-y-8 px-8 py-16 transition-all w-full justify-center items-center">
+              <div className="rounded-lg px-4 py-4 col-span-2 sm:col-span-3 row-span-1 lg:col-span-1 lg:border-2 lg:h-32">
                 <p className="text-xl font-semibold">
                   Colaborate with popular brand
                 </p>
@@ -764,15 +770,15 @@ export default function Home() {
                 </svg>
               </div>
               <button
-                className="group/item rounded-lg h-32 px-4 py-4 shadow-lg hover:brightness-115 border-2  flex justify-between hover:brightness-125 transition-all text-white items-center"
+                className="group/item rounded-lg justify-center gap-x-4 lg:gap-x-0 w-full px-4 py-4 shadow-lg hover:brightness-115 hover:bg-black/50 lg:border-2 hover:border-transparent flex lg:justify-between hover:brightness-125 transition-all text-white items-center col-span-2 sm:col-span-3 lg:col-span-1 lg:h-32"
                 onClick={togglePopup}
               >
                 <p className="text-xl w-fit font-semibold">
                   Contact us for cooperation
                 </p>
-                <div className="rounded-full bg-black px-3 py-3">
+                <div className="rounded-full group-hover/item:bg-white transition-all duration-500 bg-black px-3 py-3">
                   <svg
-                    className="group/edit group-hover/item:rotate-45 rotate-90 transition-all"
+                    className="group/edit group-hover/item:text-black duration-500 group-hover/item:rotate-45 rotate-90 transition-all"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"

@@ -2,8 +2,8 @@ export default function Footer() {
   return (
     <div className="text-black w-full pt-6 pb-8 px-8 bg-white  flex flex-col justify-center items-center Frounded">
       <div className="flex flex-col justify-center w-full items-center">
-        <div className="grid grid-cols-9 grid-rows-1 px-8 gap-x-20 mx-auto max-w-7xl py-10 border-b-2 border-gray-300/50">
-          <ul className="flex flex-col gap-y-2 col-span-2 py-8">
+        <div className="grid grid-cols-3 lg:grid-cols-9 gap-y-4 grid-rows-1 px-8 mx-auto max-w-7xl py-10 border-b-2 border-gray-300/50">
+          <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
               <h3 className="font-semibold roboto">Product</h3>
             </li>
@@ -15,7 +15,7 @@ export default function Footer() {
             <li className="text-sm">Recruiting</li>
           </ul>
 
-          <ul className="flex flex-col gap-y-2 col-span-2 py-8">
+          <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
               <h3 className="font-semibold roboto">Information</h3>
             </li>
@@ -24,7 +24,7 @@ export default function Footer() {
             <li className="text-sm">Support</li>
           </ul>
 
-          <ul className="flex flex-col gap-y-2 col-span-2 py-8">
+          <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
               <h3 className="font-semibold roboto">Company</h3>
             </li>
@@ -34,7 +34,7 @@ export default function Footer() {
             <li className="text-sm">Lift Media</li>
           </ul>
 
-          <div className="flex flex-col gap-y-2 bg-slate-200 px-10 py-8 rounded-lg col-span-3">
+          <div className="flex flex-col gap-y-2 bg-slate-200 px-10 py-8 rounded-lg col-span-3 row-start-1 col-start-1 lg:col-start-7 lg:col-span-3">
             <h3 className="font-semibold roboto pb-4">Subscribe</h3>
             <div className="flex border-2 rounded-lg">
               <input
@@ -145,11 +145,11 @@ export default function Footer() {
                   width="26"
                   height="26"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
