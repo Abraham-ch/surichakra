@@ -163,15 +163,15 @@ export default function Home() {
           <div className="max-w-7xl flex flex-col justify-center items-center w-full roboto gap-y-6">
             <motion.h1
               className="text-5xl sm:text-6xl transition-all lg:text-7xl font-semibold bg-gradient-to-r bg-clip-text text-transparent from-purple-400 to-emerald-400 brightness-150 text-center "
-              initial={{ opacity: 0, scale: 0.5, y: -50 }}
+              initial={{ opacity: 0, scale: 1, y: 0 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{
-                duration: 0.8,
+                duration: 0.5,
                 delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              Some title by default{" "}
+              Some title by default
               <div className="text-white font-semibold text-center">
                 of Surichakra
               </div>
