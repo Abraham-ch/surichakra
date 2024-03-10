@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between w-full items-center pt-8 px-0 min-[440px]:px-24 pb-4">
+      <div className="flex justify-between w-full items-center pt-8 px-0 md:px-24 pb-4">
         <div>
           <a href="#">Surichakra</a>
         </div>
