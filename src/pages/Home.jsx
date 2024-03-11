@@ -116,6 +116,7 @@ const ContactPopup = ({ isOpen, togglePopup }) => {
                   href="https://wa.me/956394308"
                   target="_blank"
                   className="flex bg-green-500 text-white font-bold py-2 px-4 rounded flex-row gap-x-3 w-full"
+                  title="Whatsapp"
                 >
                   <svg
                     width="24"
@@ -226,7 +227,7 @@ export default function Home() {
 
             <div className="grid gap-y-4 sm:grid-cols-3 w-full px-12 md:gap-x-6 transition-all gap-x-2 lg:gap-x-12 py-4">
               <motion.div
-                className="bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center"
+                className="text-adjust-100 bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center"
                 initial={{ opacity: 0, scale: 0.5, x: -200 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{
@@ -255,7 +256,7 @@ export default function Home() {
                     Amplia Compatibilidad
                   </h3>
                 </span>
-                <p className="pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
+                <p className="text-adjust-100 pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
                   Soporte para una extensa variedad de dispositivos mediante la
                   integración con plataformas líderes en el mercado de IoT, como
                   Tuya y asistentes de voz como Alexa.
@@ -263,7 +264,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center"
+                className="text-adjust-100 bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center"
                 initial={{ opacity: 0, scale: 0.5, y: 50 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{
@@ -296,7 +297,7 @@ export default function Home() {
                     Interfaz Intuitiva
                   </h3>
                 </span>
-                <p className="pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
+                <p className="text-adjust-100 pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
                   Interfaz amigable que permita a los usuarios configurar
                   fácilmente sus dispositivos, visualizar datos en tiempo real y
                   automatizar tareas.
@@ -304,7 +305,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center"
+                className="text-adjust-100 bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center"
                 initial={{ opacity: 0, scale: 0.5, x: 200 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{
@@ -333,7 +334,7 @@ export default function Home() {
                     Automatización de Hogar y Negocios
                   </h3>
                 </span>
-                <p className="pt-2 px-0 lg:px-3 text-pretty lg:pt-3 text-sm roboto text-[#909090] max-h-36 truncate">
+                <p className="text-adjust-100 pt-2 px-0 lg:px-3 text-pretty lg:pt-3 text-sm roboto text-[#909090] max-h-36 truncate">
                   Capacidad para crear automatizaciones complejas que abarquen
                   tanto el ámbito del hogar inteligente como necesidades
                   industriales y comerciales.

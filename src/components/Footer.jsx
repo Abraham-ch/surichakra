@@ -50,7 +50,10 @@ export default function Footer() {
                 className="px-4 py-3 w-full text-sm min-[440px]:text-base"
                 placeholder="Email address"
               />
-              <button className="rounded-r-lg bg-blue-500 text-white px-3 ">
+              <button
+                className="rounded-r-lg bg-blue-500 text-white px-3 "
+                title="Suscribe"
+              >
                 <svg
                   width="24"
                   height="24"
@@ -78,16 +81,18 @@ export default function Footer() {
       </div>
       <div className="flex justify-between w-full items-center pt-8 px-0 md:px-24 pb-4">
         <div>
-          <a href="#">Surichakra</a>
+          <a title="main page" href="#">
+            Surichakra
+          </a>
         </div>
         <div className="hidden min-[440px]:flex justify-center text-sm roboto font-semibold">
-          <a href="#" className="px-3">
+          <a title="Therms" href="#" className="px-3">
             Therms
           </a>
-          <a href="#" className="px-3 ">
+          <a title="Privacy" href="#" className="px-3 ">
             Privacy
           </a>
-          <a href="#" className="px-3 ">
+          <a title="Cookies" href="#" className="px-3 ">
             Cookies
           </a>
         </div>
@@ -98,6 +103,7 @@ export default function Footer() {
                 href="https://wa.me/956394308"
                 target="_blank"
                 className="hover:text-green-600 transition-all"
+                title="Whatsapp"
               >
                 <svg
                   className="hover:scale-105"
@@ -121,6 +127,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/skytech-la/?originalSubdomain=pe"
                 target="_blank"
                 className="hover:text-blue-600 transition-all"
+                title="Linkedin"
               >
                 <svg
                   className="hover:scale-105"
@@ -147,6 +154,7 @@ export default function Footer() {
                 href="mailto:ascaytaos@gmail.com"
                 target="_blank"
                 className="transition-all hover:text-red-600"
+                title="Mail"
               >
                 <svg
                   className="hover:scale-105"

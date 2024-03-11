@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      // Agrega tus clases de utilidad personalizadas
+      textAdjust: {
+        none: "none",
+        auto: "auto",
+        100: "100%",
+      },
+    },
   },
   plugins: [],
 };

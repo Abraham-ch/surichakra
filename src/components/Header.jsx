@@ -14,6 +14,7 @@ const VerticalMenu = () => {
       <button
         className="bg-transparent text-white font-bold py-3 px-4 w-full text-left focus:bg-gradient-to-r from-sky-500/25 to-cyan-400/25"
         onClick={toggleMenu}
+        title="menu"
       >
         <svg
           width="24"
