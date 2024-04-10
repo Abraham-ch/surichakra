@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 import "../App.css";
-import surichakradash from "../assets/img0.png";
 import Footer from "../components/Footer";
 import React, { useState, useRef, useEffect } from "react";
 import video from "../assets/video.mp4";
+import videoperson from "../assets/1024.mp4";
 import { motion } from "framer-motion";
 import Section from "../components/motionSection";
 
@@ -31,7 +31,6 @@ const VideoComponent = () => {
 
   return (
     <Section>
-      {/* Poner dentro del primer div para que el video se reproduzca al hacer hover a Section en lugar de reproducir al aparecer onMouseEnter={handleMouseEnter} */}
       <div className="h-full w-full mt-20 mb-32">
         <div className="w-11/12 mx-auto h-full bg-white rounded-lg flex flex-col items-center justify-between">
           <span>
@@ -41,19 +40,67 @@ const VideoComponent = () => {
             <div className="text-center pt-4 sm:pt-8 font-semibold text-4xl min-[440px]:text-6xl sm:text-7xl">
               EN TIEMPO REAL
             </div>
-            <p className="text-center pt-4 sm:pt-8 max-w-xl xl:max-w-2xl text-xs min-[440px]:text-sm px-4 sm:px-0 sm:text-base xl:text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Perferendis molestias voluptatibus ea adipisci alias soluta ex
-              laudantium.
+            <p className="text-center pt-4 sm:pt-8 max-w-xl xl:max-w-3xl xl:pb-4 text-xs min-[440px]:text-sm px-4 sm:px-0 sm:text-base xl:text-base">
+              Descubre la potencia de Surichakra a través de su dashboard, donde
+              podrás monitorizar en tiempo real variables clave de calidad del
+              aire, la tierra y el agua. Además, nuestra plataforma ofrece
+              seguridad avanzada para proteger la información de tus
+              dispositivos y usuarios.
             </p>
           </span>
           <div className="w-full sm:w-5/6 rounded-lg self-center">
-            <video muted autoPlay>
-              {/* poner ref para el video que se quiera reproducir al hacer hover ref={videoRef} */}
+            <video muted autoPlay className="rounded-t-xl">
               <source src={video} type="video/mp4" />
               Tu navegador no soporta la etiqueta de video.
             </video>
           </div>
+        </div>
+      </div>
+    </Section>
+  );
+};
+
+const VideoPersonalization = () => {
+  const videoRef = useRef(null);
+  const [hasEnded, setHasEnded] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (!hasEnded) {
+      videoRef.current.play();
+    }
+  };
+
+  const handleVideoEnd = () => {
+    setHasEnded(true);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+      }
+    };
+  }, []);
+
+  return (
+    <Section>
+      <div className="h-full w-full mt-20 mb-32 flex justify-center items-center px-20 gap-x-20">
+        <div class="flex flex-col justify-between text-white w-1/2 gap-y-8">
+          <h2 className="font-semibold text-3xl min-[440px]:text-5xl text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-cyan-400 tracking-wide leading-snug">
+            Personaliza tu Experiencia
+          </h2>
+          <p className="text-lg">
+            Con Surichakra, puedes personalizar tu dashboard para adaptarlo a
+            tus necesidades específicas. Añade o quita variables, ajusta el
+            tamaño de los gráficos y añade widgets para obtener la información
+            que más te interesa de manera rápida y sencilla.
+          </p>
+        </div>
+        <div className=" sm:w-5/6 rounded-lg self-center w-1/2">
+          <video muted autoPlay className="rounded-xl">
+            <source src={videoperson} type="video/mp4" />
+            Tu navegador no soporta la etiqueta de video.
+          </video>
         </div>
       </div>
     </Section>
@@ -172,9 +219,9 @@ export default function Home() {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              Some title by default
+              Gestión IoT en la Nube
               <div className="text-white font-semibold text-center">
-                of Surichakra
+                Surichakra
               </div>
             </motion.h1>
             <motion.p
@@ -187,10 +234,11 @@ export default function Home() {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates earum reiciendis labore facilis nisi vel sint incidunt
-              corporis, eos, repellendus placeat impedit illum similique, nihil
-              ipsa nam harum repellat amet!
+              Surichakra es una plataforma de gestión IoT en la nube que unifica
+              la conexión, monitorización y gestión de una amplia gama de
+              dispositivos IoT. Destacamos por nuestra interoperabilidad,
+              permitiendo la integración con dispositivos industriales,
+              comerciales y de hogar inteligente.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0.5, y: 50 }}
@@ -253,13 +301,12 @@ export default function Home() {
                     </svg>
                   </span>
                   <h3 className="py-1 transition-all lg:text-base text-sm font-medium">
-                    Amplia Compatibilidad
+                    Interfaz Intuitiva
                   </h3>
                 </span>
                 <p className="text-adjust-100 pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
-                  Soporte para una extensa variedad de dispositivos mediante la
-                  integración con plataformas líderes en el mercado de IoT, como
-                  Tuya y asistentes de voz como Alexa.
+                  Configura fácilmente tus dispositivos, visualiza datos en
+                  tiempo real, configura alertas y automatiza tareas.
                 </p>
               </motion.div>
 
@@ -294,13 +341,12 @@ export default function Home() {
                     </svg>
                   </span>
                   <h3 className="py-1 transition-all lg:text-base text-sm font-medium">
-                    Interfaz Intuitiva
+                    Amplia Compatibilidad
                   </h3>
                 </span>
                 <p className="text-adjust-100 pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
-                  Interfaz amigable que permita a los usuarios configurar
-                  fácilmente sus dispositivos, visualizar datos en tiempo real y
-                  automatizar tareas.
+                  Integra una variedad de dispositivos con plataformas líderes
+                  de IoT y asistentes de voz como Alexa.
                 </p>
               </motion.div>
 
@@ -331,13 +377,12 @@ export default function Home() {
                     </svg>
                   </span>
                   <h3 className="py-1 transition-all lg:text-base text-sm font-medium">
-                    Automatización de Hogar y Negocios
+                    Automatización Avanzada
                   </h3>
                 </span>
                 <p className="text-adjust-100 pt-2 px-0 lg:px-3 text-pretty lg:pt-3 text-sm roboto text-[#909090] max-h-36 truncate">
-                  Capacidad para crear automatizaciones complejas que abarquen
-                  tanto el ámbito del hogar inteligente como necesidades
-                  industriales y comerciales.
+                  Crea automatizaciones complejas para hogares inteligentes y
+                  entornos comerciales e industriales.
                 </p>
               </motion.div>
             </div>
@@ -347,25 +392,28 @@ export default function Home() {
 
       <VideoComponent />
 
+      <VideoPersonalization />
+
       <Section>
         <div className="h-full w-full flex flex-col mt-24 text-white">
           <div className="max-w-7xl w-full mx-auto">
             <h1 className="font-semibold text-3xl min-[440px]:text-5xl text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-cyan-400 tracking-wide leading-snug py-8 px-8 max-w-5xl ">
-              Colaborando con industrias IoT
+              ¿Por qué Surichakra es diferente?
             </h1>
             <div className="divide-x flex items-center min-[440px]:px-0 px-4">
               <p className=" hidden min-[440px]:block text-base transition-all md:text-lg font-light max-w-2xl px-8 items-center text-pretty">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti nisi laborum nihil voluptate eligendi delectus quis
-                nobis similique quod maiores expedita esse dolor.
+                Surichakra destaca por su enfoque en la interoperabilidad y
+                facilidad de uso. Ofrecemos una solución integrada y segura para
+                la gestión de dispositivos IoT, mejorando la eficiencia
+                operativa y la comodidad en hogares y negocios.
               </p>
               <div className="px-8 items-center">
                 <h3 className="text-3xl md:text-4xl font-semibold">80+</h3>
-                <p className="text-base md:text-lg ">Hasta esta cantidad</p>
+                <p className="text-base md:text-lg ">Modulos activos</p>
               </div>
               <div className="px-8 items-center">
-                <h3 className="text-3xl md:text-4xl font-semibold">64</h3>
-                <p className="text-base md:text-lg ">Hasta esta cantidad</p>
+                <h3 className="text-3xl md:text-4xl font-semibold">64+</h3>
+                <p className="text-base md:text-lg ">Variables medidas</p>
               </div>
             </div>
             <div className="grid grid-cols-1 min-[440px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 gap-x-8 gap-y-8 px-8 py-16 transition-all w-full justify-center items-center">

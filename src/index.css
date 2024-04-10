@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-:host {
-  text-size-adjust: 100%;
+html {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
 }
