@@ -38,19 +38,19 @@ const VerticalMenu = () => {
             to="/"
             className="block px-12 py-3 bg-cyan-400/25 text-white border-cyan-400/35 hover:bg-gradient-to-r from-sky-500/35 to-cyan-400/35 hover:border-transparent transition-all"
           >
-            Home
+            Inicio
           </Link>
           <Link
             to="/AboutUs"
             className="block px-12 py-3 bg-cyan-400/25 text-white border-cyan-400/35 hover:bg-gradient-to-r from-sky-500/35 to-cyan-400/35 hover:border-transparent transition-all"
           >
-            Read About Us
+            Acerca de
           </Link>
           <Link
             to="/Pricing"
             className="block px-12 bg-cyan-400/25 py-3 text-white border-cyan-400/35 hover:bg-gradient-to-r from-sky-500/35 to-cyan-400/35 hover:border-transparent transition-all"
           >
-            Pricing
+            Precios
           </Link>
         </div>
       )}
@@ -97,7 +97,7 @@ export default function Header() {
               to="/AboutUs"
               className="px-8 hover:bg-black/20 h-full flex flex-col justify-center"
             >
-              About Us
+              Acerca de
             </Link>
           </li>
           <li className="h-full">
@@ -105,7 +105,7 @@ export default function Header() {
               to="/Pricing"
               className="px-8 hover:bg-black/20 h-full flex flex-col justify-center"
             >
-              Pricing
+              Precios
             </Link>
           </li>
         </ul>
@@ -114,13 +114,13 @@ export default function Header() {
             className="font-semibold text-base mx-2 border-2 rounded-lg px-6 py-2 border-sky-400 border-solid hover:bg-gradient-to-r to-cyan-400 from-blue-500 hover:border-none hover:scale-105  hover:shadow-md shadow-cyan-400 transition-all"
             href="https://www.surichakra.com/login"
           >
-            Sing In
+            Iniciar Sesion
           </a>
           <a
             className="font-semibold text-base mx-2 border-2 border-sky-400 bg-sky-400 hover:bg-gradient-to-r from-sky-300 to-cyan-500 px-6  py-2 rounded-lg text-black hover:brightness-110 transition-all hover:border-none hover:scale-105 Frounded"
             href="https://www.surichakra.com/register"
           >
-            Get Started
+            Registrese
           </a>
         </div>
       </nav>

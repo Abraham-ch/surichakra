@@ -7,23 +7,25 @@ export default function AboutUs() {
     <div className="bg-[#161815] bg-[radial-gradient(#ffffff33_1px,#161815_1px)] bg-[size:50px_50px]">
       <Header />
       <div className="h-full w-full  py-12 mb-16">
-        <div className="mx-auto w-11/12 h-full bg-gradient-to-b from-gray-100 to-sky-100 rounded-lg shadow-sm flex flex-col justify-center gap-y-16 py-8">
+        <div className="mx-auto w-11/12 h-full bg-gradient-to-bl from-purple-200 via-gray-100 to-sky-200 rounded-lg shadow-sm flex flex-col justify-center gap-y-16 py-8">
           <Section>
             <div className="flex justify-center md:flex-row flex-col max-w-6xl mx-8 xl:mx-auto items-center h-full gap-x-8 my-16 ">
               <div className="flex flex-col justify-center ">
                 <h1 className="tracking-wider roboto text-4xl transition-all lg:text-5xl max-w-md self-start py-4 font-semibold">
-                  Some title by default, more things to cover...
+                  Nosotros somos
                 </h1>
                 <p className="text-base leading-6 lg:text-lg lg:leading-7 py-4 text-pretty">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Nobis libero totam rem aliquid adipisci commodi distinctio
-                  voluptate repellat beatae, et quia ad, perferendis corporis
-                  quam hic eligendi. Fuga, pariatur consequatur.
+                  Somos Surichakra, una empresa dedicada a ofrecer soluciones
+                  innovadoras en la gestión de dispositivos IoT. Nuestra
+                  plataforma en la nube unifica la conexión, monitorización y
+                  gestión de una amplia gama de dispositivos, desde dispositivos
+                  industriales y comerciales hasta dispositivos de hogar
+                  inteligente.
                 </p>
                 <a
                   target="_blank"
                   href="#"
-                  className="border-2 self-center min-[440px]:self-start rounded-lg px-6 py-3 w-fit font-semibold border-black hover:scale-105 transition-all my-2"
+                  className="border-2 self-center min-[440px]:self-start rounded-lg px-6 py-3 w-fit font-semibold border-black hover:scale-105 transition-all my-2 hidden"
                 >
                   Try it for free
                 </a>
@@ -933,18 +935,21 @@ export default function AboutUs() {
             <div className="flex justify-center md:flex-row-reverse flex-col max-w-6xl mx-8 xl:mx-auto items-center h-full gap-x-8 my-16 ">
               <div className="flex flex-col justify-center ">
                 <h1 className="tracking-wider roboto text-4xl transition-all lg:text-5xl max-w-md self-start py-4 font-semibold">
-                  Some title by default, more things to cover...
+                  Nuestro Compromiso
                 </h1>
                 <p className="text-base leading-6 lg:text-lg lg:leading-7 py-4 text-pretty">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Nobis libero totam rem aliquid adipisci commodi distinctio
-                  voluptate repellat beatae, et quia ad, perferendis corporis
-                  quam hic eligendi. Fuga, pariatur consequatur.
+                  Nos destacamos por nuestra capacidad de ofrecer una
+                  experiencia de usuario cohesiva y segura, eliminando barreras
+                  entre diferentes ecosistemas de dispositivos IoT. Creemos en
+                  el poder de la tecnología para mejorar la calidad de vida y
+                  optimizar procesos. Nuestro equipo está comprometido en
+                  ofrecer soluciones que impulsen la innovación y faciliten la
+                  adopción de tecnologías IoT en todo el mundo.
                 </p>
                 <a
                   target="_blank"
                   href="#"
-                  className="border-2 self-center min-[440px]:self-start rounded-lg px-6 py-3 w-fit font-semibold border-black hover:scale-105 transition-all my-2"
+                  className="border-2 self-center min-[440px]:self-start rounded-lg px-6 py-3 w-fit font-semibold border-black hover:scale-105 transition-all my-2 hidden"
                 >
                   Try it for free
                 </a>
