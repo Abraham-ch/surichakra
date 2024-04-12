@@ -417,9 +417,9 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-1 min-[440px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 gap-x-8 gap-y-8 px-8 py-16 transition-all w-full justify-center items-center">
-              <div className="rounded-lg px-4 py-4 col-span-1 min-[440px]:col-span-2 sm:col-span-3 row-span-1 lg:col-span-1 lg:border-2 lg:h-32 ">
+              <div className="items-center flex justify-center rounded-lg px-4 py-4 col-span-1 min-[440px]:col-span-2 sm:col-span-3 row-span-1 lg:col-span-1 lg:border-2 lg:h-32 ">
                 <p className="text-base text-center min-[440px]:text-left min-[440px]:text-xl font-semibold">
-                  Colaborate with popular brand
+                  Características
                 </p>
               </div>
               <div className="rounded-lg h-32 px-4 py-4 bg-neutral-800 shadow-lg hover:brightness-115 border-2 border-transparent flex justify-center items-center">

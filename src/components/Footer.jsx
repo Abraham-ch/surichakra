@@ -6,43 +6,69 @@ export default function Footer() {
           <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
               <h3 className="min-[440px]:text-base text-sm font-semibold roboto">
-                Product
+                Producto
               </h3>
             </li>
-            <li className="text-xs min-[440px]:text-sm">Employee Database</li>
-            <li className="text-xs min-[440px]:text-sm">Payroll</li>
-            <li className="text-xs min-[440px]:text-sm">Absenses</li>
-            <li className="text-xs min-[440px]:text-sm">Time tracking</li>
-            <li className="text-xs min-[440px]:text-sm">Shift planner</li>
-            <li className="text-xs min-[440px]:text-sm">Recruiting</li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Características</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Precios</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Casos de uso</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Integraciones</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Soporte técnico</a>
+            </li>
           </ul>
 
           <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
               <h3 className="min-[440px]:text-base text-sm font-semibold roboto">
-                Information
+                Información
               </h3>
             </li>
-            <li className="text-xs min-[440px]:text-sm">FAQ</li>
-            <li className="text-xs min-[440px]:text-sm">Blog</li>
-            <li className="text-xs min-[440px]:text-sm">Support</li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Blog</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Preguntas frecuentes</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Política de privacidad</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Términos y condiciones</a>
+            </li>
           </ul>
 
           <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
               <h3 className="min-[440px]:text-base text-sm font-semibold roboto">
-                Company
+                Compañía
               </h3>
             </li>
-            <li className="text-xs min-[440px]:text-sm">About us</li>
-            <li className="text-xs min-[440px]:text-sm">Careers</li>
-            <li className="text-xs min-[440px]:text-sm">Contact us</li>
-            <li className="text-xs min-[440px]:text-sm">Lift Media</li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Acerca de Nosotros</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Equipo</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Carreras</a>
+            </li>
+            <li className="text-xs min-[440px]:text-sm">
+              <a href="#">Socios</a>
+            </li>
           </ul>
 
           <div className="flex flex-col gap-y-2 bg-slate-200 px-10 py-8 rounded-lg col-span-3 row-start-1 col-start-1 lg:col-start-7 lg:col-span-3">
             <h3 className="text-sm min-[440px]:text-base font-semibold roboto pb-4">
-              Subscribe
+              Suscribase!
             </h3>
             <div className="flex border-2 rounded-lg">
               <input
@@ -51,7 +77,7 @@ export default function Footer() {
                 placeholder="Email address"
               />
               <button
-                className="rounded-r-lg bg-blue-500 text-white px-3 "
+                className="rounded-r-lg bg-blue-500 text-white px-3 hover:brightness-90"
                 title="Suscribe"
               >
                 <svg
@@ -72,9 +98,8 @@ export default function Footer() {
               </button>
             </div>
             <p className="text-xs min-[440px]:text-sm text-gray-500 pt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam alias dolor commodi, quasi aspernatur pariatur ea
-              explicabo totam nemo eveniet.
+              Únete a nuestra lista de correo para recibir las últimas
+              actualizaciones del producto, noticias y contenido relacionado.
             </p>
           </div>
         </div>
