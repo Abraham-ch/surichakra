@@ -3,7 +3,42 @@ import Header from "../components/Header";
 import Section from "../components/motionSection";
 import "../App.css";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+function AnimatedText() {
+  const [dots, setDots] = useState("");
+  const [fillingDots, setFillingDots] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!fillingDots) {
+        setDots((prev) => (prev.length < 3 ? prev + "." : ""));
+        if (dots.length === 3) {
+          setFillingDots(true);
+        }
+      } else {
+        setDots((prev) => (prev.length > 0 ? prev.slice(0, -1) : ""));
+        if (dots.length === 0) {
+          setFillingDots(false);
+        }
+      }
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, [dots, fillingDots]);
+
+  return (
+    <div className="flex items-center justify-center">
+      <div
+        className="text-6xl font-bold text-center"
+        style={{ width: "400px" }}
+      >
+        <span>Próximamente</span>
+        <span>{dots}</span>
+      </div>
+    </div>
+  );
+}
 
 export default function Pricing() {
   const [selectedId, setSelectedId] = useState(null);
@@ -14,18 +49,17 @@ export default function Pricing() {
 
       <div className="h-full w-full pt-16 pb-20 ">
         <Section>
-          <div className="flex flex-col h-full py-4 xl:py-16 transition-all lg:py-8 w-11/12 mx-auto rounded-lg px-8 xl:px-16 justify-center bg-slate-50">
-            <div className="flex flex-col justify-center max-w-7xl pb-10 px-2 min-[440px]:px-8">
-              <h2 className="text-3xl min-[440px]:text-4xl font-bold pt-2 pb-2">
-                Our Simple Pricing
-              </h2>
-              <p className="min-[440px]:text-base text-sm text-pretty max-w-5xl pt-2">
+          <div className="flex gap-x-16 items-center my-4 h-full py-4 xl:py-16 transition-all lg:py-8 w-11/12 mx-auto rounded-lg px-8 xl:px-16 justify-center text-white">
+            <div className="flex flex-col justify-center max-w-7xl h-[400px] w-full px-2 min-[440px]:px-8 items-start">
+              <AnimatedText />
+              {/* <p className="min-[440px]:text-base text-sm text-pretty max-w-5xl pt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing eli t. At
                 labore quae fugiat voluptates officiis. Cumque minima minus
                 aliquid architecto. Provident eaque cum maxime numquam
                 explicabo.
-              </p>
+              </p> */}
             </div>
+            {/* 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-2 lg:gap-x-4 xl:gap-x-8 max-w-7xl mx-auto w-full gap-y-8">
               <div className="h-fit flex flex-col gap-y-3 px-7 bg-white py-5 min-[440px]:py-7 rounded-xl place-items-center w-full shadow-lg hover:shadow-xl transition-all">
                 <div className="flex justify-between w-full lg:px-0 lg:pb-0 items-center px-4 pb-4">
@@ -585,6 +619,7 @@ export default function Pricing() {
                 </a>
               </div>
             </div>
+            */}
           </div>
         </Section>
       </div>
