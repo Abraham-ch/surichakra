@@ -29,10 +29,7 @@ function AnimatedText() {
 
   return (
     <div className="flex items-center justify-center">
-      <div
-        className="text-6xl font-bold text-center"
-        style={{ width: "400px" }}
-      >
+      <div className="text-3xl min-[400px]:text-4xl min-[500px]:text-5xl min-[600px]:text-6xl font-bold text-center min-[550px]:w-[300px]">
         <span>Próximamente</span>
         <span>{dots}</span>
       </div>
@@ -49,8 +46,8 @@ export default function Pricing() {
 
       <div className="h-full w-full pt-16 pb-20 ">
         <Section>
-          <div className="flex gap-x-16 items-center my-4 h-full py-4 xl:py-16 transition-all lg:py-8 w-11/12 mx-auto rounded-lg px-8 xl:px-16 justify-center text-white">
-            <div className="flex flex-col justify-center max-w-7xl h-[400px] w-full px-2 min-[440px]:px-8 items-start">
+          <div className="flex gap-x-16 items-center my-4 h-full py-4 xl:py-16 transition-all lg:py-8 w-11/12 mx-auto rounded-lg min-[500px]:px-8 xl:px-16 justify-center text-white">
+            <div className="flex flex-col justify-center h-[400px] w-full px-2 min-[440px]:px-8 items-start">
               <AnimatedText />
               {/* <p className="min-[440px]:text-base text-sm text-pretty max-w-5xl pt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing eli t. At
