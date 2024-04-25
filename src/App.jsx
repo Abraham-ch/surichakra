@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import AboutUs from "./pages/AboutUs";
@@ -8,6 +9,7 @@ import "./App.css";
 function App() {
   return (
     <>
+      <SpeedInsights />
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
