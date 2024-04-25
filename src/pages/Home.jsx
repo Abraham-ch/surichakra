@@ -34,22 +34,26 @@ const VideoComponent = () => {
       <div className="h-full w-full mt-20 mb-32">
         <div className="w-11/12 mx-auto h-full bg-white rounded-lg flex flex-col items-center justify-between">
           <span>
-            <h2 className=" text-center leading-tight font-semibold text-xl min-[440px]:text-2xl sm:text-4xl pt-8 sm:pt-16 ">
+            <h2 className="text-center leading-tight font-semibold text-lg min-[300px]:text-xl min-[500px]:text-2xl sm:text-3xl md:text-4xl pt-4 min-[600px]:pt-8 sm:pt-12 md:pt-14 lg:pt-16 ">
               Estima tus registros
             </h2>
-            <div className="text-center pt-4 sm:pt-8 font-semibold text-4xl min-[440px]:text-6xl sm:text-7xl">
+            <div className="text-center pt-1 min-[600px]:text-6xl min-[340px]:pt-4 sm:pt-8 font-semibold text-3xl min-[440px]:text-4xl min-[600px]:text-5xl lg:text-7xl transition-all">
               EN TIEMPO REAL
             </div>
-            <p className="text-center pt-4 sm:pt-8 max-w-xl xl:max-w-3xl xl:pb-4 text-xs min-[440px]:text-sm px-4 sm:px-0 sm:text-base xl:text-base">
+            <p className="min-[340px]:block hidden text-center pt-4 pb-2 sm:pt-8 max-w-xl xl:max-w-3xl xl:pb-4 text-xs min-[440px]:text-sm min-[440px]:text-xs px-4 sm:px-0 sm:text-base xl:text-base transition-all">
               Descubre la potencia de Surichakra a través de su dashboard, donde
               podrás monitorizar en tiempo real variables clave de calidad del
               aire, la tierra y el agua. Además, nuestra plataforma ofrece
               seguridad avanzada para proteger la información de tus
               dispositivos y usuarios.
             </p>
+            <p className="min-[340px]:hidden block text-center pt-4 sm:pt-8 max-w-xl xl:max-w-3xl xl:pb-4 text-xs min-[350px]:text-sm px-4 sm:px-0 sm:text-base xl:text-base transition-all">
+              Descubre la potencia de Surichakra a través de su dashboard, donde
+              podrás monitorizar en tiempo real.
+            </p>
           </span>
           <div className="w-full sm:w-5/6 rounded-lg self-center">
-            <video muted autoPlay className="rounded-t-xl">
+            <video muted autoPlay className="sm:rounded-t-xl">
               <source src={video} type="video/mp4" />
               Tu navegador no soporta la etiqueta de video.
             </video>
@@ -84,19 +88,19 @@ const VideoPersonalization = () => {
 
   return (
     <Section>
-      <div className="h-full w-full mt-20 mb-32 flex justify-center items-center px-20 gap-x-20">
-        <div class="flex flex-col justify-between text-white w-1/2 gap-y-8">
-          <h2 className="font-semibold text-3xl min-[440px]:text-5xl text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-cyan-400 tracking-wide leading-snug">
+      <div className="h-full w-full mt-20 mb-32 flex min-[1000px]:flex-row flex-col justify-center items-center gap-y-8 px-4 min-[600px]:px-10 min-[1000px]:px-20 gap-x-20 transition-all">
+        <div class="flex flex-col justify-between text-white w-full md:w-full gap-y-4 min-[600px]:gap-y-8">
+          <h2 className="font-semibold text-2xl min-[400px]:text-3xl min-[600px]:text-4xl text-left min-[600px]:text-center md:text-left min-[1090px]:text-5xl text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-cyan-400 tracking-wide leading-snug transition-all">
             Personaliza tu Experiencia
           </h2>
-          <p className="text-lg">
+          <p className="min-[600px]:text-lg min-[500px]:text-base min-[400px]:text-sm text-xs transition-all">
             Con Surichakra, puedes personalizar tu dashboard para adaptarlo a
             tus necesidades específicas. Añade o quita variables, ajusta el
             tamaño de los gráficos y añade widgets para obtener la información
             que más te interesa de manera rápida y sencilla.
           </p>
         </div>
-        <div className=" sm:w-5/6 rounded-lg self-center w-1/2">
+        <div className=" min-[1000px]:w-5/6 rounded-lg self-center w-full min-[600px]:w-11/12 min-[1000px]:w-[1300px] min-[1090px]:w-[1500px] min-[1178px]:w-[1900px] transition-all">
           <video muted autoPlay className="rounded-xl">
             <source src={videoperson} type="video/mp4" />
             Tu navegador no soporta la etiqueta de video.
