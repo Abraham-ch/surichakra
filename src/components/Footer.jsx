@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <div className="text-black w-full pt-6 pb-8 px-2 min-[440px]:px-8 bg-white  flex flex-col justify-center items-center Frounded">
+    <div className="text-black w-full pt-6 pb-8 px-2 min-[440px]:px-4 bg-white  flex flex-col justify-center items-center Frounded">
       <div className="flex flex-col justify-center w-full items-center">
-        <div className="grid grid-cols-3 lg:grid-cols-9 gap-y-4 grid-rows-1 px-1 min-[440px]:px-8 mx-auto max-w-7xl py-10 border-b-2 border-gray-300/50">
+        <div className="grid grid-cols-3 lg:grid-cols-9 gap-y-4 grid-rows-1 px-1 min-[440px]:px-4 mx-auto max-w-7xl py-10 border-b-2 border-gray-300/50 justify-center">
           <ul className="flex flex-col gap-y-2 col-span-1 lg:col-span-2 py-8 mx-auto lg:mx-0">
             <li>
               <h3 className="min-[440px]:text-base text-sm font-semibold roboto">

@@ -277,9 +277,9 @@ export default function Home() {
               </form>
             </motion.div>
 
-            <div className="grid gap-y-4 sm:grid-cols-3 w-full px-12 md:gap-x-6 transition-all gap-x-2 lg:gap-x-12 py-4">
+            <div className="grid gap-y-4 sm:grid-cols-3 w-auto px-12 md:gap-x-6 transition-all gap-x-2 lg:gap-x-12 py-4">
               <motion.div
-                className="text-adjust-100 bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center"
+                className="text-adjust-100 bg-neutral-800 text-white rounded-lg px-8 py-6 flex flex-col justify-center w-auto"
                 initial={{ opacity: 0, scale: 0.5, x: -200 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{
@@ -308,7 +308,7 @@ export default function Home() {
                     Interfaz Intuitiva
                   </h3>
                 </span>
-                <p className="text-adjust-100 pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
+                <p className="text-adjust-100 pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090]">
                   Configura fácilmente tus dispositivos, visualiza datos en
                   tiempo real, configura alertas y automatiza tareas.
                 </p>
@@ -348,7 +348,7 @@ export default function Home() {
                     Amplia Compatibilidad
                   </h3>
                 </span>
-                <p className="text-adjust-100 pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090] max-h-36 truncate">
+                <p className="text-adjust-100 pt-2 lg:pt-3 px-0 lg:px-3 text-pretty text-sm roboto text-[#909090]">
                   Integra una variedad de dispositivos con plataformas líderes
                   de IoT y asistentes de voz como Alexa.
                 </p>
@@ -384,7 +384,7 @@ export default function Home() {
                     Automatización Avanzada
                   </h3>
                 </span>
-                <p className="text-adjust-100 pt-2 px-0 lg:px-3 text-pretty lg:pt-3 text-sm roboto text-[#909090] max-h-36 truncate">
+                <p className="text-adjust-100 pt-2 px-0 lg:px-3 text-pretty lg:pt-3 text-sm roboto text-[#909090]">
                   Crea automatizaciones complejas para hogares inteligentes y
                   entornos comerciales e industriales.
                 </p>
