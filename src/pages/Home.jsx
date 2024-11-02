@@ -1,34 +1,13 @@
 import Header from "../components/Header";
 import "../App.css";
 import Footer from "../components/Footer";
-import React, { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import video from "../assets/video.mp4";
 import videoperson from "../assets/1024.mp4";
 import { motion } from "framer-motion";
 import Section from "../components/motionSection";
 
-const VideoComponent = () => {
-  const videoRef = useRef(null);
-  const [hasEnded, setHasEnded] = useState(false);
-
-  const handleMouseEnter = () => {
-    if (!hasEnded) {
-      videoRef.current.play();
-    }
-  };
-
-  const handleVideoEnd = () => {
-    setHasEnded(true);
-  };
-
-  useEffect(() => {
-    return () => {
-      if (videoRef.current) {
-        videoRef.current.pause();
-      }
-    };
-  }, []);
-
+const VideoComponent=()=>{
   return (
     <Section>
       <div className="h-full w-full mt-20 mb-32">
@@ -54,7 +33,7 @@ const VideoComponent = () => {
           </span>
           <div className="w-full sm:w-5/6 rounded-lg self-center">
             <video muted autoPlay className="sm:rounded-t-xl">
-              <source src={video} type="video/mp4" />
+              <source src={video} type="video/mp4"/>
               Tu navegador no soporta la etiqueta de video.
             </video>
           </div>
@@ -62,30 +41,9 @@ const VideoComponent = () => {
       </div>
     </Section>
   );
-};
+}
 
 const VideoPersonalization = () => {
-  const videoRef = useRef(null);
-  const [hasEnded, setHasEnded] = useState(false);
-
-  const handleMouseEnter = () => {
-    if (!hasEnded) {
-      videoRef.current.play();
-    }
-  };
-
-  const handleVideoEnd = () => {
-    setHasEnded(true);
-  };
-
-  useEffect(() => {
-    return () => {
-      if (videoRef.current) {
-        videoRef.current.pause();
-      }
-    };
-  }, []);
-
   return (
     <Section>
       <div className="h-full w-full mt-20 mb-32 flex min-[1000px]:flex-row flex-col justify-center items-center gap-y-8 px-4 min-[600px]:px-10 min-[1000px]:px-20 gap-x-20 transition-all">
@@ -109,7 +67,7 @@ const VideoPersonalization = () => {
       </div>
     </Section>
   );
-};
+}
 
 const ContactPopup = ({ isOpen, togglePopup }) => {
   return (
